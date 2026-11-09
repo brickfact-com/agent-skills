@@ -84,6 +84,12 @@ The package has no account credentials, install hooks, self-updater or backgroun
 
 Optional shopping cards load product images from `image-cdn.brickfact.com`. Following a result opens a Brickfact comparison page. These pages contain disclosed affiliate links: Brickfact may earn a commission from qualifying purchases. Returned comparison links include `utm_medium=mcp`; website analytics and the [website privacy policy](https://brickfact.com/privacy-policy) apply after a visit.
 
+## Registry publication
+
+`server.json` describes the hosted service for the Official MCP Registry under `io.github.brickfact-com/brickfact`. It contains public metadata and the existing unauthenticated endpoint, not a downloadable server package.
+
+Organization maintainers publish from the `main` branch with the manual **Publish MCP Registry** GitHub Actions workflow. It validates the metadata, verifies the pinned publisher release and authenticates using GitHub OIDC. No stored registry password or GitHub personal access token is required. Update the registry version when the hosted service changes; the agent plugin has its own version in `plugin.json`.
+
 ## Support and license
 
 [Visit Brickfact](https://brickfact.com) · [Publisher information](https://brickfact.com/imprint) · [Terms](https://brickfact.com/terms) · [Contact support](mailto:info@brickfact.com)

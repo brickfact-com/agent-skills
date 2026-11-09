@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.brickfact-com/brickfact",
+  "title": "Brickfact LEGO Shopping",
+  "description": "Find LEGO sets, compare regional retailer offers, and inspect recorded retail price history.",
+  "version": "1.1.1",
+  "websiteUrl": "https://brickfact.com",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/brickfact-com/agent-skills/c9474b7e647faee0b9f16b4bf5691d4f41d26df2/assets/icon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "192x192"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.brickfact.com/mcp"
+    }
+  ]
+}

@@ -20,4 +20,5 @@ jobs:
         run: |
           python3 -m json.tool plugin.json > /dev/null
           python3 -m json.tool mcp.json > /dev/null
+          python3 -m json.tool server.json > /dev/null
           git diff-tree --check --root HEAD
