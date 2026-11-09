@@ -34,8 +34,8 @@ jobs:
           set -euo pipefail
           archive="mcp-publisher_linux_amd64.tar.gz"
           base_url="https://github.com/modelcontextprotocol/registry/releases/download/${MCP_PUBLISHER_VERSION}"
-          curl --proto '=https' --tlsv1.2 --fail --location --silent --show-error --output "$archive" "$base_url/$archive"
-          curl --proto '=https' --tlsv1.2 --fail --location --silent --show-error --output "$archive.sigstore.json" "$base_url/$archive.sigstore.json"
+          curl --proto '=https' --tlsv1.2 --fail --location --silent --show-error --retry 3 --retry-delay 2 --retry-max-time 60 --connect-timeout 15 --max-time 90 --output "$archive" "$base_url/$archive"
+          curl --proto '=https' --tlsv1.2 --fail --location --silent --show-error --retry 3 --retry-delay 2 --retry-max-time 60 --connect-timeout 15 --max-time 90 --output "$archive.sigstore.json" "$base_url/$archive.sigstore.json"
           printf '%s  %s\n' '09f1fa70ee146b640584274a1a6b2b8a0310b05d4321fa9224e6df6a016d67f4' "$archive" | sha256sum --check
           cosign verify-blob \
             --bundle "$archive.sigstore.json" \
