@@ -1,0 +1,15 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "brickfact",
+  "version": "1.0.0",
+  "description": "Find LEGO sets, compare regional retailer offers and inspect recorded retail price history with Brickfact.",
+  "author": {
+    "name": "Brickfact",
+    "email": "info@brickfact.com",
+    "url": "https://brickfact.com"
+  },
+  "homepage": "https://brickfact.com",
+  "repository": "https://github.com/brickfact-com/agent-skills",
+  "license": "MIT",
+  "keywords": ["lego", "shopping", "price-comparison", "price-history", "mcp"]
+}
